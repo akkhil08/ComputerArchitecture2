@@ -48,7 +48,7 @@ if (c[7] != 21u) { printf("Incorrect result!\n"); return; }
 (void)time_vector_add(); (void)time_walk(1u);
 for (unsigned k = 0; k < TRIALS; ++k) {
 int64_t tv = time_vector_add();
-int64_t ts = time_walk(65u);
+int64_t ts = time_walk(65u); //for step 1 make it 1u else 65 u
 printf("Trial %u: vector=%" PRId64 " us, step65=%" PRId64 " us\n",
 k + 1, tv, ts);
 vTaskDelay(pdMS_TO_TICKS(100));
